@@ -1,0 +1,110 @@
+import React from "react";
+import Slider from "react-slick";
+import { Typography, Button, Grid } from "@material-ui/core";
+import logo1 from "../assets/imgs/logo1.jpg";
+import logo2 from "../assets/imgs/logo2.jpg";
+import logo3 from "../assets/imgs/logo3.jpg";
+import logo4 from "../assets/imgs/logo4.jpg";
+import logo5 from "../assets/imgs/logo5.jpg";
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return <div />;
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return <div />;
+}
+
+export default function Carousel() {
+  const buttonStyle = {
+    backgroundColor: "#ffb700",
+    marginBottom: "15px",
+    fontWeight: 550,
+  };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplaySpeed: 5000,
+    autoplay: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
+  return (
+    <div
+      style={{
+        textAlign: "center",
+        backgroundColor: "#fcbd00",
+      }}
+    >
+      <Slider
+        {...settings}
+        style={{
+          textAlign: "center",
+        }}
+      >
+        <div>
+          <div
+            style={{
+              background: `url(${logo2}) no-repeat center`,
+              backgroundSize: "cover",
+              paddingTop: "340px",
+              zIndex: "-10",
+            }}
+          >
+            <br />
+          </div>
+        </div>
+        <div>
+          <div
+            height="3vh"
+            style={{
+              background: `url(${logo5}) no-repeat center`,
+              backgroundSize: "cover",
+              paddingTop: "340px",
+            }}
+          >
+            <br />
+          </div>
+        </div>
+        <div>
+          <div
+            style={{
+              background: `url(${logo4}) no-repeat center`,
+              backgroundSize: "cover",
+              paddingTop: "340px",
+            }}
+          >
+            <br />
+          </div>
+        </div>
+        <div>
+          <div
+            style={{
+              background: `url(${logo3}) no-repeat center`,
+              backgroundSize: "cover",
+              paddingTop: "340px",
+            }}
+          >
+            <br />
+          </div>
+        </div>
+        <div>
+          <div
+            style={{
+              background: `url(${logo1}) no-repeat center`,
+              backgroundSize: "cover",
+              paddingTop: "340px",
+            }}
+          >
+            <br />
+          </div>
+        </div>
+      </Slider>
+    </div>
+  );
+}
