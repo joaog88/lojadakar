@@ -25,7 +25,7 @@ export default function Navbar({ titulo, abrirMenu, menuOpened }) {
     fontFamily: "Helvetica",
     fontWeight: 550,
     color: "#ededed",
-    fontSize: "1.0rem",
+    fontSize: "0.95rem",
     textTransform: "uppercase",
     display: "inline-block",
     paddingLeft: "10px",
@@ -73,7 +73,7 @@ export default function Navbar({ titulo, abrirMenu, menuOpened }) {
     <div>
       <div style={{ backgroundColor: "#2b2b2b" }}>
         <Grid container alignItems="center" justify="flex-start">
-          <Grid item xs={3} style={{ textAlign: "left", paddingLeft: "30px" }}>
+          <Grid item xs={3} style={{ textAlign: "left", paddingLeft: "20px" }}>
             <Grid container alignItems="center" justify="flex-start">
               <img
                 src="/Imagens/dakar.jpg"
@@ -141,7 +141,7 @@ export default function Navbar({ titulo, abrirMenu, menuOpened }) {
                 src="/Imagens/continentallogo.jpg"
                 height="40px"
                 onClick={voltarParaAHomeDoJao}
-                style={{ cursor: "pointer", paddingRight: "30px" }}
+                style={{ cursor: "pointer", paddingRight: "5px" }}
               />
             </Grid>
           </Grid>

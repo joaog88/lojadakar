@@ -21,6 +21,7 @@ import Escapamento from "./components/Escapamento.jsx";
 import Pneus from "./components/Pneus.jsx";
 import Oleos from "./components/Oleos.jsx";
 import AutoPecas from "./components/AutoPecas.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 function App() {
   const [menuOpened, setMenuOpened] = useState(false);
   const theme = createTheme({
@@ -40,6 +41,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
+        <ScrollToTop />
         <Hidden smUp>
           <Routes>
             <Route

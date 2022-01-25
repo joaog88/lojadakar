@@ -26,7 +26,6 @@ function Home() {
           item
           xs={12}
           style={{
-            maxHeight: "89  vh",
             overflowY: "auto",
             backgroundColor: "#d9d9d9",
           }}

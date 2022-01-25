@@ -49,25 +49,25 @@ export default function Pneus() {
     backgroundColor: "#ffc800",
     borderRadius: "10px",
     marginLeft: "30px",
-    height: "300px",
+    height: "230px",
   };
   const EstiloLetraTitulo = {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "1.8rem",
+    fontSize: "1.6rem",
   };
   const EstiloSubTitulo = {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "1.5rem",
+    fontSize: "1rem",
   };
   const EstiloLetraTexto = {
     fontFamily: "Helvetica",
     fontWeight: 450,
     color: "black",
-    fontSize: "1.2rem",
+    fontSize: "0.90rem",
   };
   const ButtonStyle = {
     fontSize: "1.25rem",
@@ -107,8 +107,8 @@ export default function Pneus() {
       <div
         style={{
           background: `url(${imagemdepneus}) no-repeat center`,
-          backgroundSize: "cover",
-          paddingTop: "415px",
+          backgroundSize: "100vw 100%",
+          paddingTop: "300px",
         }}
       >
         <br />
@@ -281,8 +281,6 @@ export default function Pneus() {
               variant="outlined"
               style={{
                 borderRadius: "7px",
-                marginLeft: "400px",
-                marginRight: "400px",
                 backgroundColor: "#ededed",
               }}
             >
@@ -359,10 +357,10 @@ export default function Pneus() {
             justify="center"
             style={{ marginTop: "10px" }}
           >
-            <Grid item xs={3}>
+            <Grid item xs={4}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
-                  <Grid item xs={12} style={{ textAlign: "Center" }}>
+                  <Grid item xs={12} style={{ textAlign: "center" }}>
                     <Typography style={EstiloSubTitulo}>Produtos</Typography>
                     <Grid item xs={12}>
                       <div
@@ -383,7 +381,7 @@ export default function Pneus() {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={4}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
                   <Grid item xs={12} style={{ textAlign: "center" }}>
@@ -408,7 +406,7 @@ export default function Pneus() {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={4}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
                   <Grid item xs={12} style={{ textAlign: "Center" }}>
@@ -437,6 +435,12 @@ export default function Pneus() {
           </Grid>
         </Grid>
       </Grid>
+      <div
+        style={{
+          backgroundColor: "#ededed",
+          paddingBottom: "5px",
+        }}
+      />
       <NavbarInferior />
     </div>
   );

@@ -38,25 +38,25 @@ export default function AutoPecas() {
     backgroundColor: "#ffc800",
     borderRadius: "10px",
     marginLeft: "30px",
-    height: "300px",
+    height: "230px",
   };
   const EstiloLetraTitulo = {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "1.8rem",
+    fontSize: "1.6rem",
   };
   const EstiloSubTitulo = {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "1.5rem",
+    fontSize: "1.0rem",
   };
   const EstiloLetraTexto = {
     fontFamily: "Helvetica",
     fontWeight: 450,
     color: "black",
-    fontSize: "1.2rem",
+    fontSize: "0.90rem",
   };
   const EstiloLetraTelefone = {
     fontFamily: "Helvetica",
@@ -99,8 +99,8 @@ export default function AutoPecas() {
       <div
         style={{
           background: `url(${oleopagina}) no-repeat center`,
-          backgroundSize: "cover",
-          paddingTop: "415px",
+          backgroundSize: "100vw 100%",
+          paddingTop: "300px",
         }}
       >
         <br />
@@ -196,8 +196,6 @@ export default function AutoPecas() {
               variant="outlined"
               style={{
                 borderRadius: "7px",
-                marginLeft: "470px",
-                marginRight: "470px",
                 backgroundColor: "#ededed",
               }}
             >
@@ -272,7 +270,7 @@ export default function AutoPecas() {
             justify="center"
             style={{ marginTop: "10px" }}
           >
-            <Grid item xs={3}>
+            <Grid item xs={4}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
                   <Grid item xs={12} style={{ textAlign: "Center" }}>
@@ -296,7 +294,7 @@ export default function AutoPecas() {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={4}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
                   <Grid item xs={12} style={{ textAlign: "center" }}>
@@ -321,7 +319,7 @@ export default function AutoPecas() {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={4}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
                   <Grid item xs={12} style={{ textAlign: "Center" }}>

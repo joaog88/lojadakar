@@ -51,9 +51,8 @@ export default function Carousel() {
           <div
             style={{
               background: `url(${logo2}) no-repeat center`,
-              backgroundSize: "cover",
+              backgroundSize: "100vw 100%",
               paddingTop: "340px",
-              zIndex: "-10",
             }}
           >
             <br />
@@ -64,7 +63,7 @@ export default function Carousel() {
             height="3vh"
             style={{
               background: `url(${logo5}) no-repeat center`,
-              backgroundSize: "cover",
+              backgroundSize: "100vw 100%",
               paddingTop: "340px",
             }}
           >
@@ -75,7 +74,7 @@ export default function Carousel() {
           <div
             style={{
               background: `url(${logo4}) no-repeat center`,
-              backgroundSize: "cover",
+              backgroundSize: "100vw 100%",
               paddingTop: "340px",
             }}
           >
@@ -86,7 +85,7 @@ export default function Carousel() {
           <div
             style={{
               background: `url(${logo3}) no-repeat center`,
-              backgroundSize: "cover",
+              backgroundSize: "100vw 100%",
               paddingTop: "340px",
             }}
           >
@@ -97,7 +96,7 @@ export default function Carousel() {
           <div
             style={{
               background: `url(${logo1}) no-repeat center`,
-              backgroundSize: "cover",
+              backgroundSize: "100vw 100%",
               paddingTop: "340px",
             }}
           >

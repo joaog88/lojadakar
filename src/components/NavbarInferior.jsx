@@ -20,7 +20,7 @@ function NavbarInferior() {
     <div
       style={{
         background: `url(${backgroundamarelo}) no-repeat center`,
-        backgroundSize: "cover",
+        backgroundSize: "100vw 100%",
       }}
     >
       <div
@@ -38,23 +38,28 @@ function NavbarInferior() {
           paddingTop: "5px",
         }}
       >
-        <Grid item xs={2} style={{ textAlign: "left", paddingLeft: "10px" }}>
-          <img
-            src="/Imagens/dakarlogoslc.png"
-            height="100px"
-            style={{
-              cursor: "pointer",
-              paddingLeft: "90px",
-              paddingBottom: "30px,",
-            }}
-          />
-          <img
-            src="/Imagens/dakarvarginha.png"
-            height="110px"
-            style={{ cursor: "pointer", paddingLeft: "93px" }}
-          />
+        <Grid item xs={2} style={{ textAlign: "right" }}>
+          <Grid container justify="flex-start" alignItems="center">
+            <Grid item xs={12}>
+              <img
+                src="/Imagens/dakarlogoslc.png"
+                height="90px"
+                style={{
+                  cursor: "pointer",
+                  paddingBottom: "30px,",
+                }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <img
+                src="/Imagens/dakarvarginha.png"
+                height="100px"
+                style={{ cursor: "pointer" }}
+              />
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item xs={4} style={{ textAlign: "left", paddingLeft: "10px" }}>
+        <Grid item xs={5} style={{ textAlign: "center" }}>
           <a
             style={{ textDecoration: "none" }}
             target="_blank"
@@ -66,7 +71,7 @@ function NavbarInferior() {
               color="secondary"
               paddingBottom="50px"
               style={{
-                fontSize: "0.80rem",
+                fontSize: "0.70rem",
                 fontWeight: 450,
                 fontFamily: "Helvetica",
                 textTransform: "none",
@@ -91,7 +96,7 @@ function NavbarInferior() {
               color="secondary"
               paddingBottom="50px"
               style={{
-                fontSize: "0.80rem",
+                fontSize: "0.70rem",
                 fontWeight: 450,
                 fontFamily: "Helvetica",
                 textTransform: "none",
@@ -102,7 +107,15 @@ function NavbarInferior() {
             </Button>
           </a>
         </Grid>
-        <Grid item xs={4} style={{ textAlign: "left", paddingLeft: "130px" }}>
+        <Grid
+          item
+          xs={4}
+          style={{
+            textAlign: "left",
+            marginTop: "10px",
+            marginBottom: "10px",
+          }}
+        >
           <Card
             variant="outlined"
             sx={{ maxWidth: 200 }}
@@ -113,116 +126,131 @@ function NavbarInferior() {
             }}
           >
             <CardContent style={{ textAlign: "Left" }}>
-              <Typography
-                textAlign="center"
-                style={{
-                  fontFamily: "Helvetica",
-                  fontWeight: 450,
-                  fontSize: "1rem",
-                  color: "#ebebeb",
-                }}
-              >
-                Fale Conosco:
-              </Typography>
-              <Button
-                variant="text"
-                startIcon={<CallOutlinedIcon />}
-                color="secondary"
-                style={{
-                  fontSize: "0.75rem",
-                  fontWeight: 545,
-                  fontFamily: "Helvetica",
-                  textTransform: "none",
-                }}
-              >
-                São Lourenço: (35) 3332-4318
-              </Button>
-              <Button
-                variant="text"
-                startIcon={<CallOutlinedIcon />}
-                color="secondary"
-                style={{
-                  fontSize: "0.75rem",
-                  fontWeight: 545,
-                  fontFamily: "Helvetica",
-                  textTransform: "none",
-                }}
-              >
-                Varginha: (35) 3222-5005
-              </Button>
-
-              <Button
-                variant="text"
-                startIcon={<EmailIcon />}
-                color="secondary"
-                style={{
-                  fontSize: "0.80rem",
-                  fontWeight: 545,
-                  fontFamily: "Helvetica",
-                  textTransform: "none",
-                }}
-              >
-                dakar.centroautomotivo@hotmail.com
-              </Button>
-              <a
-                target="_blank"
-                style={{ textDecoration: "none" }}
-                href={
-                  "https://api.whatsapp.com/send/?phone=5535997658926&text=Olá, estou entrando em contato através do site da Dakar."
-                }
-              >
-                <Button
-                  variant="text"
-                  startIcon={<WhatsAppIcon />}
-                  color="secondary"
-                  style={{
-                    fontSize: "0.80rem",
-                    fontWeight: 545,
-                    fontFamily: "Helvetica",
-                    textTransform: "none",
-                  }}
-                >
-                  Whatsapp
-                </Button>
-              </a>
-              <a
-                style={{ textDecoration: "none" }}
-                target="_blank"
-                href="https://www.facebook.com/dakarsl"
-              >
-                <Button
-                  variant="text"
-                  startIcon={<FacebookIcon />}
-                  color="secondary"
-                  style={{
-                    fontSize: "0.80rem",
-                    fontWeight: 545,
-                    fontFamily: "Helvetica",
-                    textTransform: "none",
-                  }}
-                >
-                  Facebook
-                </Button>
-              </a>
-              <a
-                style={{ textDecoration: "none" }}
-                target="_blank"
-                href="https://www.instagram.com/dakar.centroautomotivo/"
-              >
-                <Button
-                  variant="text"
-                  startIcon={<InstagramIcon />}
-                  color="secondary"
-                  style={{
-                    fontSize: "0.80rem",
-                    fontWeight: 545,
-                    fontFamily: "Helvetica",
-                    textTransform: "none",
-                  }}
-                >
-                  Instagram
-                </Button>
-              </a>
+              <Grid container justify="flex-start" alignItems="center">
+                <Grid item xs={12}>
+                  <Typography
+                    textAlign="center"
+                    style={{
+                      fontFamily: "Helvetica",
+                      fontWeight: 450,
+                      fontSize: "0.80rem",
+                      color: "#ebebeb",
+                    }}
+                  >
+                    Fale Conosco:
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Button
+                    variant="text"
+                    startIcon={<CallOutlinedIcon />}
+                    color="secondary"
+                    style={{
+                      fontSize: "0.70rem",
+                      fontWeight: 545,
+                      fontFamily: "Helvetica",
+                      textTransform: "none",
+                    }}
+                  >
+                    São Lourenço: (35) 3332-4318
+                  </Button>
+                </Grid>
+                <Grid item xs={6}>
+                  <Button
+                    variant="text"
+                    startIcon={<CallOutlinedIcon />}
+                    color="secondary"
+                    style={{
+                      fontSize: "0.70rem",
+                      fontWeight: 545,
+                      fontFamily: "Helvetica",
+                      textTransform: "none",
+                    }}
+                  >
+                    Varginha: (35) 3222-5005
+                  </Button>
+                </Grid>
+                <Grid item xs={12}>
+                  <Button
+                    variant="text"
+                    startIcon={<EmailIcon />}
+                    color="secondary"
+                    style={{
+                      fontSize: "0.70rem",
+                      fontWeight: 545,
+                      fontFamily: "Helvetica",
+                      textTransform: "none",
+                    }}
+                  >
+                    dakar.centroautomotivo@hotmail.com
+                  </Button>
+                </Grid>
+                <Grid item xs={4}>
+                  <a
+                    target="_blank"
+                    style={{ textDecoration: "none" }}
+                    href={
+                      "https://api.whatsapp.com/send/?phone=5535997658926&text=Olá, estou entrando em contato através do site da Dakar."
+                    }
+                  >
+                    <Button
+                      variant="text"
+                      startIcon={<WhatsAppIcon />}
+                      color="secondary"
+                      style={{
+                        fontSize: "0.70rem",
+                        fontWeight: 545,
+                        fontFamily: "Helvetica",
+                        textTransform: "none",
+                      }}
+                    >
+                      Whatsapp
+                    </Button>
+                  </a>
+                </Grid>
+                <Grid item xs={4}>
+                  <a
+                    style={{ textDecoration: "none" }}
+                    target="_blank"
+                    href="https://www.facebook.com/dakarsl"
+                  >
+                    <Button
+                      variant="text"
+                      startIcon={<FacebookIcon />}
+                      color="secondary"
+                      style={{
+                        fontSize: "0.70rem",
+                        fontWeight: 545,
+                        fontFamily: "Helvetica",
+                        textTransform: "none",
+                      }}
+                    >
+                      Facebook
+                    </Button>
+                  </a>
+                </Grid>
+                <Grid item xs={4}>
+                  <a
+                    style={{ textDecoration: "none" }}
+                    target="_blank"
+                    href="https://www.instagram.com/dakar.centroautomotivo/"
+                  >
+                    <Button
+                      variant="text"
+                      startIcon={<InstagramIcon />}
+                      color="secondary"
+                      style={{
+                        fontSize: "0.70rem",
+                        fontWeight: 545,
+                        fontFamily: "Helvetica",
+                        textTransform: "none",
+                      }}
+                    >
+                      Instagram
+                    </Button>
+                  </a>
+                </Grid>
+              </Grid>
             </CardContent>
           </Card>
         </Grid>
