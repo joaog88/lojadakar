@@ -146,7 +146,7 @@ export default function Trocadeoleo() {
       <Grid container alignItems="flex-start" justify="flex-start">
         <Grid
           item
-          xs={4}
+          xs={5}
           style={{
             textAlign: "left",
             paddingLeft: "15px",
