@@ -61,13 +61,13 @@ export default function Pneus() {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "1rem",
+    fontSize: "1.1rem",
   };
   const EstiloLetraTexto = {
     fontFamily: "Helvetica",
     fontWeight: 450,
     color: "black",
-    fontSize: "0.90rem",
+    fontSize: "1.0rem",
   };
   const ButtonStyle = {
     fontSize: "1.25rem",

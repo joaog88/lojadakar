@@ -43,7 +43,7 @@ export default function Serviços() {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "1.5rem",
+    fontSize: "1.3rem",
   };
   const EstiloCard = {
     paddingTop: "20px",

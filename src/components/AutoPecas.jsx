@@ -50,13 +50,13 @@ export default function AutoPecas() {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "1.0rem",
+    fontSize: "1.1rem",
   };
   const EstiloLetraTexto = {
     fontFamily: "Helvetica",
     fontWeight: 450,
     color: "black",
-    fontSize: "0.90rem",
+    fontSize: "1.0rem",
   };
   const EstiloLetraTelefone = {
     fontFamily: "Helvetica",
