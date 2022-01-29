@@ -24,7 +24,7 @@ function SamplePrevArrow(props) {
 
 export default function Carousel() {
   const buttonStyle = {
-    backgroundColor: "#ffb700",
+    backgroundColor: "#000000",
     marginBottom: "15px",
     fontWeight: 550,
   };
