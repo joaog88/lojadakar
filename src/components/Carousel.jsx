@@ -7,6 +7,10 @@ import logo3 from "../assets/imgs/logo3.jpg";
 import logo4 from "../assets/imgs/logo4.jpg";
 import logo5 from "../assets/imgs/logo5.jpg";
 import logo1mobile from "../assets/imgs/logo1mobile.jpg";
+import logo2mobile from "../assets/imgs/logo2mobile.jpg";
+import logo3mobile from "../assets/imgs/logo3mobile.jpg";
+import logo4mobile from "../assets/imgs/logo4mobile.jpg";
+import logo5mobile from "../assets/imgs/logo5mobile.jpg";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -128,7 +132,7 @@ export default function Carousel() {
           <div>
             <div
               style={{
-                background: `url(${logo1mobile}) no-repeat center`,
+                background: `url(${logo4mobile}) no-repeat center`,
                 backgroundSize: "cover",
                 paddingTop: "280px",
               }}
@@ -139,7 +143,29 @@ export default function Carousel() {
           <div>
             <div
               style={{
-                background: `url(${logo1mobile}) no-repeat center`,
+                background: `url(${logo3mobile}) no-repeat center`,
+                backgroundSize: "cover",
+                paddingTop: "280px",
+              }}
+            >
+              <br />
+            </div>
+          </div>
+          <div>
+            <div
+              style={{
+                background: `url(${logo2mobile}) no-repeat center`,
+                backgroundSize: "cover",
+                paddingTop: "280px",
+              }}
+            >
+              <br />
+            </div>
+          </div>
+          <div>
+            <div
+              style={{
+                background: `url(${logo5mobile}) no-repeat center`,
                 backgroundSize: "cover",
                 paddingTop: "280px",
               }}
