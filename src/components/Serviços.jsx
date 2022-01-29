@@ -59,7 +59,7 @@ export default function Serviços() {
       >
         <Grid item xs={12} style={{ marginTop: "5px" }}>
           <Grid container alignItems="flex-start" justify="flex-start">
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4}>
               <Typography variant="h4" style={EstiloLetra}>
                 AGENDE SEU SERVIÇO
               </Typography>
@@ -73,7 +73,7 @@ export default function Serviços() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={4} style={{ textAlign: "center" }}>
+        <Grid item xs={12} sm={4} style={{ textAlign: "center" }}>
           <div onClick={AgendeSeuAlinhamento}>
             <Card
               style={{
@@ -90,7 +90,7 @@ export default function Serviços() {
             </Card>
           </div>
         </Grid>
-        <Grid item xs={4} style={{ textAlign: "center" }}>
+        <Grid xs={12} sm={4} style={{ textAlign: "center" }}>
           <div onClick={AgendeSeuBalanceamento}>
             <Card
               style={{
@@ -107,7 +107,7 @@ export default function Serviços() {
             </Card>
           </div>
         </Grid>
-        <Grid item xs={4} style={{ textAlign: "center" }}>
+        <Grid xs={12} sm={4} style={{ textAlign: "center" }}>
           <div onClick={AgendeSuaTrocadeoleo}>
             <Card
               style={{
@@ -124,7 +124,7 @@ export default function Serviços() {
             </Card>
           </div>
         </Grid>
-        <Grid item xs={4} style={{ textAlign: "center" }}>
+        <Grid item xs={12} sm={4} style={{ textAlign: "center" }}>
           <div onClick={Suspensao}>
             <Card
               style={{
@@ -141,7 +141,7 @@ export default function Serviços() {
             </Card>
           </div>
         </Grid>
-        <Grid item xs={4} style={{ textAlign: "center" }}>
+        <Grid item xs={12} sm={4} style={{ textAlign: "center" }}>
           <div onClick={Motor}>
             <Card
               style={{
@@ -158,7 +158,7 @@ export default function Serviços() {
             </Card>
           </div>
         </Grid>
-        <Grid item xs={4} style={{ textAlign: "center" }}>
+        <Grid item xs={12} sm={4} style={{ textAlign: "center" }}>
           <div onClick={Escapamento}>
             <Card
               style={{

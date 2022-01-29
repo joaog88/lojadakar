@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from "@material-ui/core";
+import { Button, Grid, Typography, Hidden } from "@material-ui/core";
 import React from "react";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import TextField from "@mui/material/TextField";
@@ -21,6 +21,15 @@ export default function Balanceamento() {
     backgroundColor: "#ffc800",
     padding: "5px",
   };
+  const ButtonStyleMobile = {
+    fontSize: "0.92rem",
+    fontWeight: 540,
+    textTransform: "none",
+    fontFamily: "Helvetica",
+    variant: "contained",
+    backgroundColor: "#ffc800",
+    padding: "5px",
+  };
   const ButtonStyleTelefone = {
     fontSize: "1.25rem",
     fontWeight: 540,
@@ -29,8 +38,16 @@ export default function Balanceamento() {
     variant: "contained",
     padding: "5px",
   };
+  const ButtonStyleTelefoneMobile = {
+    fontSize: "0.92rem",
+    fontWeight: 540,
+    textTransform: "none",
+    fontFamily: "Helvetica",
+    variant: "contained",
+    padding: "5px",
+  };
   const ButtonStyleEndereço = {
-    fontSize: "1rem",
+    fontSize: "0.92rem",
     fontWeight: 549,
     textTransform: "none",
 
@@ -44,11 +61,23 @@ export default function Balanceamento() {
     color: "black",
     fontSize: "1.5rem",
   };
+  const EstiloLetraMobile = {
+    fontFamily: "Helvetica",
+    fontWeight: 600,
+    color: "black",
+    fontSize: "1.2rem",
+  };
   const EstiloLetraCard = {
     fontFamily: "Helvetica",
     fontWeight: 450,
     color: "black",
     fontSize: "1.25rem",
+  };
+  const EstiloLetraCardMobile = {
+    fontFamily: "Helvetica",
+    fontWeight: 450,
+    color: "black",
+    fontSize: "1.0rem",
   };
   return (
     <div style={{ backgroundColor: "#d9d9d9" }}>
@@ -88,56 +117,110 @@ export default function Balanceamento() {
                 justify="center"
                 style={{ textAlign: "center" }}
               >
-                <Grid item xs={12}>
-                  <Typography style={EstiloLetraCard}>
-                    Agende seu alinhamento com um de nossos atendentes via:
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} style={{ paddingTop: "10px" }}>
-                  <a
-                    target="_blank"
-                    style={{ textDecoration: "none" }}
-                    href={
-                      "https://api.whatsapp.com/send/?phone=5535997658926&text=Olá, gostaria de fazer um orçamento para fazer um balanceamento."
-                    }
-                  >
-                    <Button
-                      variant="outlined"
-                      startIcon={<WhatsAppIcon />}
-                      fullWidth
-                      style={ButtonStyle}
+                <Hidden xsDown>
+                  <Grid item xs={12}>
+                    <Typography style={EstiloLetraCard}>
+                      Agende seu balanceamento com um de nossos atendentes via:
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12} style={{ paddingTop: "10px" }}>
+                    <a
+                      target="_blank"
+                      style={{ textDecoration: "none" }}
+                      href={
+                        "https://api.whatsapp.com/send/?phone=5535997658926&text=Olá, gostaria de fazer um orçamento para fazer um balanceamento."
+                      }
                     >
-                      Whatsapp
+                      <Button
+                        variant="outlined"
+                        startIcon={<WhatsAppIcon />}
+                        fullWidth
+                        style={ButtonStyle}
+                      >
+                        Whatsapp
+                      </Button>
+                    </a>
+                  </Grid>
+                  <Grid item xs={12} style={{ paddingTop: "10px" }}>
+                    <Typography style={EstiloLetraCard}>
+                      Se preferir, ligue no número:
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={6} style={{ paddingTop: "10px" }}>
+                    <Button
+                      variant="text"
+                      startIcon={<CallOutlinedIcon />}
+                      color="primary"
+                      style={ButtonStyleTelefone}
+                      fullWidth
+                    >
+                      São Lourenço:(35) 3332-4318
                     </Button>
-                  </a>
-                </Grid>
-                <Grid item xs={12} style={{ paddingTop: "10px" }}>
-                  <Typography style={EstiloLetraCard}>
-                    Se preferir, ligue no número:
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} style={{ paddingTop: "10px" }}>
-                  <Button
-                    variant="text"
-                    startIcon={<CallOutlinedIcon />}
-                    color="primary"
-                    style={ButtonStyleTelefone}
-                    fullWidth
-                  >
-                    São Lourenço:(35) 3332-4318
-                  </Button>
-                </Grid>
-                <Grid item xs={6} style={{ paddingTop: "10px" }}>
-                  <Button
-                    variant="text"
-                    startIcon={<CallOutlinedIcon />}
-                    color="primary"
-                    style={ButtonStyleTelefone}
-                    fullWidth
-                  >
-                    Varginha: (35) 3222-5005
-                  </Button>
-                </Grid>
+                  </Grid>
+                  <Grid item xs={6} style={{ paddingTop: "10px" }}>
+                    <Button
+                      variant="text"
+                      startIcon={<CallOutlinedIcon />}
+                      color="primary"
+                      style={ButtonStyleTelefone}
+                      fullWidth
+                    >
+                      Varginha: (35) 3222-5005
+                    </Button>
+                  </Grid>
+                </Hidden>
+                <Hidden smUp>
+                  <Grid item xs={12}>
+                    <Typography style={EstiloLetraCardMobile}>
+                      Agende seu balanceamento com um de nossos atendentes via:
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12} style={{ paddingTop: "10px" }}>
+                    <a
+                      target="_blank"
+                      style={{ textDecoration: "none" }}
+                      href={
+                        "https://api.whatsapp.com/send/?phone=5535997658926&text=Olá, gostaria de fazer um orçamento para fazer um balanceamento."
+                      }
+                    >
+                      <Button
+                        variant="outlined"
+                        startIcon={<WhatsAppIcon />}
+                        fullWidth
+                        style={ButtonStyleMobile}
+                      >
+                        Whatsapp
+                      </Button>
+                    </a>
+                  </Grid>
+                  <Grid item xs={12} style={{ paddingTop: "10px" }}>
+                    <Typography style={EstiloLetraCardMobile}>
+                      Se preferir, ligue no número:
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12} style={{ paddingTop: "10px" }}>
+                    <Button
+                      variant="text"
+                      startIcon={<CallOutlinedIcon />}
+                      color="primary"
+                      style={ButtonStyleTelefoneMobile}
+                      fullWidth
+                    >
+                      São Lourenço:(35) 3332-4318
+                    </Button>
+                  </Grid>
+                  <Grid item xs={12} style={{ paddingTop: "10px" }}>
+                    <Button
+                      variant="text"
+                      startIcon={<CallOutlinedIcon />}
+                      color="primary"
+                      style={ButtonStyleTelefoneMobile}
+                      fullWidth
+                    >
+                      Varginha: (35) 3222-5005
+                    </Button>
+                  </Grid>
+                </Hidden>
               </Grid>
             </CardContent>
           </Card>
@@ -146,17 +229,26 @@ export default function Balanceamento() {
       <Grid container alignItems="flex-start" justify="flex-start">
         <Grid
           item
-          xs={5}
+          xs={12}
+          sm={5}
           style={{
             textAlign: "left",
             paddingLeft: "15px",
-            marginTop: "125px",
+            paddingRight: "15px",
+            marginTop: "130px",
             marginBottom: "30px",
           }}
         >
-          <Typography style={EstiloLetra}>
-            Ou vá até uma de nossas lojas
-          </Typography>
+          <Hidden xsDown>
+            <Typography style={EstiloLetra}>
+              Ou vá até uma de nossas lojas
+            </Typography>
+          </Hidden>
+          <Hidden smUp>
+            <Typography style={EstiloLetraMobile}>
+              Ou vá até uma de nossas lojas
+            </Typography>
+          </Hidden>
           <div
             style={{
               backgroundColor: "#690000",
@@ -164,81 +256,160 @@ export default function Balanceamento() {
             }}
           />
         </Grid>
-        <Grid container alignItems="flex-start" justify="center">
-          <Grid item xs={6} style={{ paddingLeft: "30px" }}>
-            <a
-              style={{ textDecoration: "none" }}
-              target="_blank"
-              href="https://www.google.com/maps/dir/-22.1188723,-45.0466521/-22.1228677,-45.0402271/@-22.119906,-45.0735525,13.25z/data=!4m4!4m3!1m1!4e1!1m0"
-            >
-              <Card
-                variant="outlined"
-                sx={{ maxWidth: 685 }}
-                style={{ backgroundColor: "#d9d9d9" }}
+        <Grid
+          container
+          alignItems="flex-start"
+          justify="center"
+          style={{
+            marginBottom: "15px",
+            marginLeft: "5px",
+            marginRight: "5px",
+          }}
+        >
+          <Hidden xsDown>
+            <Grid item xs={6}>
+              <a
+                style={{ textDecoration: "none" }}
+                target="_blank"
+                href="https://www.google.com/maps/dir/-22.1188723,-45.0466521/-22.1228677,-45.0402271/@-22.119906,-45.0735525,13.25z/data=!4m4!4m3!1m1!4e1!1m0"
               >
-                <CardContent style={{ textAlign: "center" }}>
-                  <Button
-                    variant="text"
-                    startIcon={<LocationOnOutlinedIcon />}
-                    color="primary"
-                    paddingBottom="50px"
-                    style={ButtonStyleEndereço}
-                  >
-                    Av. Damião Junqueira de Souza, Número:1120, São Lourenço -
-                    MG, 37470-000
-                  </Button>
-                  <img
-                    src="/Imagens/dakarsaolourenco.jpg"
-                    height="270px"
-                    style={{
-                      border: "#690000 1px solid",
-                      borderRadius: "5px",
-                      cursor: "pointer",
-                    }}
-                  />
-                </CardContent>
-              </Card>
-            </a>
-          </Grid>
-          <Grid
-            item
-            xs={6}
-            style={{ paddingLeft: "30px", paddingBottom: "20px" }}
-          >
-            <a
-              style={{ textDecoration: "none" }}
-              target="_blank"
-              href="https://www.google.com/maps/dir/-22.1188723,-45.0466521/-21.57066,-45.43906/@-21.8995963,-46.0147217,9z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0"
-            >
-              <Card
-                variant="outlined"
-                sx={{ maxWidth: 665 }}
-                style={{ backgroundColor: "#d9d9d9" }}
+                <Card
+                  variant="outlined"
+                  sx={{ maxWidth: 685 }}
+                  style={{ backgroundColor: "#d9d9d9" }}
+                >
+                  <CardContent style={{ textAlign: "center" }}>
+                    <Button
+                      variant="text"
+                      startIcon={<LocationOnOutlinedIcon />}
+                      color="primary"
+                      paddingBottom="50px"
+                      style={ButtonStyleEndereço}
+                    >
+                      Av. Damião Junqueira de Souza, Número:1120, São Lourenço -
+                      MG, 37470-000
+                    </Button>
+                    <img
+                      src="/Imagens/dakarsaolourenco.jpg"
+                      height="250px"
+                      style={{
+                        border: "#690000 1px solid",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                      }}
+                    />
+                  </CardContent>
+                </Card>
+              </a>
+            </Grid>
+            <Grid item xs={6} style={{ paddingLeft: "30px" }}>
+              <a
+                style={{ textDecoration: "none" }}
+                target="_blank"
+                href="https://www.google.com/maps/dir/-22.1188723,-45.0466521/-21.57066,-45.43906/@-21.8995963,-46.0147217,9z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0"
               >
-                <CardContent style={{ textAlign: "center" }}>
-                  <Button
-                    variant="text"
-                    startIcon={<LocationOnOutlinedIcon />}
-                    color="primary"
-                    paddingBottom="50px"
-                    style={ButtonStyleEndereço}
-                  >
-                    Av. Princesa do Sul, Número: 131 - Jardim Andere, Varginha -
-                    MG, 37026-083
-                  </Button>
-                  <img
-                    src="/Imagens/lojavarginha.jpg"
-                    height="270px"
-                    style={{
-                      border: "#690000 1px solid",
-                      borderRadius: "5px",
-                      cursor: "pointer",
-                    }}
-                  />
-                </CardContent>
-              </Card>
-            </a>
-          </Grid>
+                <Card
+                  variant="outlined"
+                  sx={{ maxWidth: 665 }}
+                  style={{ backgroundColor: "#d9d9d9" }}
+                >
+                  <CardContent style={{ textAlign: "center" }}>
+                    <Button
+                      variant="text"
+                      startIcon={<LocationOnOutlinedIcon />}
+                      color="primary"
+                      paddingBottom="50px"
+                      style={ButtonStyleEndereço}
+                    >
+                      Av. Princesa do Sul, Número: 131 - Jardim Andere, Varginha
+                      - MG, 37026-083
+                    </Button>
+                    <img
+                      src="/Imagens/lojavarginha.jpg"
+                      height="250px"
+                      style={{
+                        border: "#690000 1px solid",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                      }}
+                    />
+                  </CardContent>
+                </Card>
+              </a>
+            </Grid>
+          </Hidden>
+          <Hidden smUp>
+            <Grid item xs={12}>
+              <a
+                style={{ textDecoration: "none" }}
+                target="_blank"
+                href="https://www.google.com/maps/dir/-22.1188723,-45.0466521/-22.1228677,-45.0402271/@-22.119906,-45.0735525,13.25z/data=!4m4!4m3!1m1!4e1!1m0"
+              >
+                <Card
+                  variant="outlined"
+                  sx={{ maxWidth: 685 }}
+                  style={{ backgroundColor: "#d9d9d9" }}
+                >
+                  <CardContent style={{ textAlign: "center" }}>
+                    <Button
+                      variant="text"
+                      startIcon={<LocationOnOutlinedIcon />}
+                      color="primary"
+                      paddingBottom="50px"
+                      style={ButtonStyleEndereço}
+                    >
+                      Av. Damião Junqueira de Souza, Número:1120, São Lourenço -
+                      MG, 37470-000
+                    </Button>
+                    <img
+                      src="/Imagens/dakarsaolourenco.jpg"
+                      height="200px"
+                      style={{
+                        border: "#690000 1px solid",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                      }}
+                    />
+                  </CardContent>
+                </Card>
+              </a>
+            </Grid>
+            <Grid item xs={12} style={{ paddingTop: "5px" }}>
+              <a
+                style={{ textDecoration: "none" }}
+                target="_blank"
+                href="https://www.google.com/maps/dir/-22.1188723,-45.0466521/-21.57066,-45.43906/@-21.8995963,-46.0147217,9z/data=!3m1!4b1!4m4!4m3!1m1!4e1!1m0"
+              >
+                <Card
+                  variant="outlined"
+                  sx={{ maxWidth: 665 }}
+                  style={{ backgroundColor: "#d9d9d9" }}
+                >
+                  <CardContent style={{ textAlign: "center" }}>
+                    <Button
+                      variant="text"
+                      startIcon={<LocationOnOutlinedIcon />}
+                      color="primary"
+                      paddingBottom="50px"
+                      style={ButtonStyleEndereço}
+                    >
+                      Av. Princesa do Sul, Número: 131 - Jardim Andere, Varginha
+                      - MG, 37026-083
+                    </Button>
+                    <img
+                      src="/Imagens/lojavarginha.jpg"
+                      height="200px"
+                      style={{
+                        border: "#690000 1px solid",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                      }}
+                    />
+                  </CardContent>
+                </Card>
+              </a>
+            </Grid>
+          </Hidden>
         </Grid>
       </Grid>
     </div>

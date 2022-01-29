@@ -6,6 +6,7 @@ import {
   Grid,
   TextField,
   Typography,
+  Hidden,
 } from "@material-ui/core";
 import React from "react";
 import NavbarInferior from "./NavbarInferior";
@@ -44,7 +45,13 @@ export default function AutoPecas() {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "1.6rem",
+    fontSize: "1.3rem",
+  };
+  const EstiloLetraTituloMobile = {
+    fontFamily: "Helvetica",
+    fontWeight: 600,
+    color: "black",
+    fontSize: "1.05rem",
   };
   const EstiloSubTitulo = {
     fontFamily: "Helvetica",
@@ -56,25 +63,16 @@ export default function AutoPecas() {
     fontFamily: "Helvetica",
     fontWeight: 450,
     color: "black",
-    fontSize: "1.0rem",
-  };
-  const EstiloLetraTelefone = {
-    fontFamily: "Helvetica",
-    fontWeight: 600,
-    color: "black",
-    fontSize: "0.98rem",
+    fontSize: "0.95rem",
   };
   const ButtonStyle = {
-    fontSize: "1.20rem",
+    fontSize: "1.0rem",
     fontWeight: 540,
     textTransform: "none",
     fontFamily: "Helvetica",
     variant: "contained",
     backgroundColor: "#ffc800",
-    padding: "2px",
-    paddingRight: "5px",
-    paddingLeft: "5px",
-    borderRadius: "15px",
+    borderRadius: "20px",
   };
   const ButtonStyleTelefone = {
     fontSize: "0.95rem",
@@ -92,19 +90,27 @@ export default function AutoPecas() {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "1.2rem",
+    fontSize: "1.0rem",
+  };
+  const EstiloLetraTelefone = {
+    fontFamily: "Helvetica",
+    fontWeight: 600,
+    color: "black",
+    fontSize: "0.9rem",
   };
   return (
     <div>
-      <div
-        style={{
-          background: `url(${autopecasimagem}) no-repeat center`,
-          backgroundSize: "100vw 100%",
-          paddingTop: "300px",
-        }}
-      >
-        <br />
-      </div>
+      <Hidden xsDown>
+        <div
+          style={{
+            background: `url(${autopecasimagem}) no-repeat center`,
+            backgroundSize: "100vw 100%",
+            paddingTop: "300px",
+          }}
+        >
+          <br />
+        </div>
+      </Hidden>
       <div
         style={{
           backgroundColor: "#121212",
@@ -124,7 +130,7 @@ export default function AutoPecas() {
             justify="center"
             style={{ textAlign: "center" }}
           >
-            <Grid item xs={6}>
+            <Grid item xs={12}>
               <Typography style={EstiloLetraTitulo}>
                 Qual peça você está procurando?
               </Typography>
@@ -136,34 +142,65 @@ export default function AutoPecas() {
             xs={12}
             style={{ textAlign: "center", verticalAlign: "middle" }}
           >
-            <div
-              style={{
-                textAlign: "center",
-                display: "inline-block",
-                float: "center",
-                verticalAlign: "middle",
-              }}
-            >
-              <Box
-                component="form"
-                noValidate
-                autoComplete="off"
-                style={{ marginRight: "5px" }}
+            <Hidden xsDown>
+              <div
+                style={{
+                  textAlign: "center",
+                  display: "inline-block",
+                  float: "center",
+                  verticalAlign: "middle",
+                }}
               >
-                <TextField
-                  id="outlined-multiline-static"
-                  multiline
-                  rows={2.5}
-                  placeholder="Digite Aqui"
-                  variant="outlined"
-                  color="primary"
-                  focused
-                  style={{ width: "500px" }}
-                  onChange={handleChange}
-                  value={value}
-                />
-              </Box>
-            </div>
+                <Box
+                  component="form"
+                  noValidate
+                  autoComplete="off"
+                  style={{ marginRight: "5px" }}
+                >
+                  <TextField
+                    id="outlined-multiline-static"
+                    multiline
+                    rows={2.5}
+                    placeholder="Digite Aqui"
+                    variant="outlined"
+                    color="primary"
+                    focused
+                    style={{ width: "500px" }}
+                    onChange={handleChange}
+                    value={value}
+                  />
+                </Box>
+              </div>
+            </Hidden>
+            <Hidden smUp>
+              <div
+                style={{
+                  textAlign: "center",
+                  display: "inline-block",
+                  float: "center",
+                  verticalAlign: "middle",
+                }}
+              >
+                <Box
+                  component="form"
+                  noValidate
+                  autoComplete="off"
+                  style={{ marginBottom: "8px" }}
+                >
+                  <TextField
+                    id="outlined-multiline-static"
+                    multiline
+                    rows={2}
+                    placeholder="Digite Aqui"
+                    variant="outlined"
+                    color="primary"
+                    focused
+                    onChange={handleChange}
+                    value={value}
+                  />
+                </Box>
+              </div>
+            </Hidden>
             <div
               style={{
                 textAlign: "center",
@@ -252,17 +289,32 @@ export default function AutoPecas() {
           }}
         >
           <Grid item xs={12} style={{ marginBottom: "30px" }}>
-            <Typography style={EstiloLetraTitulo}>
-              Por que comprar peças na Dakar?
-            </Typography>
-            <Grid item xs={8}>
-              <div
-                style={{
-                  backgroundColor: "#690000",
-                  paddingBottom: "4px",
-                }}
-              />
-            </Grid>
+            <Hidden xsDown>
+              <Typography style={EstiloLetraTitulo}>
+                Por que comprar peças na Dakar?
+              </Typography>
+              <Grid item xs={8}>
+                <div
+                  style={{
+                    backgroundColor: "#690000",
+                    paddingBottom: "4px",
+                  }}
+                />
+              </Grid>
+            </Hidden>
+            <Hidden smUp>
+              <Typography style={EstiloLetraTituloMobile}>
+                Por que comprar peças na Dakar?
+              </Typography>
+              <Grid item xs={12}>
+                <div
+                  style={{
+                    backgroundColor: "#690000",
+                    paddingBottom: "4px",
+                  }}
+                />
+              </Grid>
+            </Hidden>
           </Grid>
           <Grid
             container
@@ -270,7 +322,7 @@ export default function AutoPecas() {
             justify="center"
             style={{ marginTop: "10px" }}
           >
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4} style={{ marginBottom: "15px" }}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
                   <Grid item xs={12} style={{ textAlign: "Center" }}>
@@ -293,7 +345,7 @@ export default function AutoPecas() {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4} style={{ marginBottom: "15px" }}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
                   <Grid item xs={12} style={{ textAlign: "center" }}>
@@ -318,7 +370,7 @@ export default function AutoPecas() {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={4}>
+            <Grid itemxs={12} sm={4}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
                   <Grid item xs={12} style={{ textAlign: "Center" }}>
@@ -347,7 +399,21 @@ export default function AutoPecas() {
           </Grid>
         </Grid>
       </Grid>
-      <NavbarInferior />
+      <Hidden xsDown>
+        <NavbarInferior />
+      </Hidden>
+      <Hidden smUp>
+        <Grid
+          container
+          alignItems="center"
+          justify="center"
+          style={{ textAlign: "center" }}
+        >
+          <Grid item xs={12}>
+            <NavbarInferior />
+          </Grid>
+        </Grid>
+      </Hidden>
     </div>
   );
 }

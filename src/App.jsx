@@ -42,6 +42,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <ScrollToTop />
+        {/*
         <Hidden smUp>
           <Routes>
             <Route
@@ -51,39 +52,39 @@ function App() {
           </Routes>
         </Hidden>
         <Hidden xsDown>
-          <Navbar abrirMenu={abrirMenu} menuOpened={menuOpened} />
-          <Routes>
-            <Route path="/" element={<Home menuOpened={menuOpened} />} />
-            <Route
-              path="/alinhamento"
-              element={<Alinhamento menuOpened={menuOpened} />}
-            />
-            <Route
-              path="/balanceamento"
-              element={<Balanceamento menuOpened={menuOpened} />}
-            />
-            <Route
-              path="/trocadeoleo"
-              element={<Trocadeoleo menuOpened={menuOpened} />}
-            />
-            <Route
-              path="/suspensao"
-              element={<Suspensao menuOpened={menuOpened} />}
-            />
-            <Route path="/motor" element={<Motor menuOpened={menuOpened} />} />
-            <Route
-              path="/escapamento"
-              element={<Escapamento menuOpened={menuOpened} />}
-            />
-            <Route path="/pneus" element={<Pneus menuOpened={menuOpened} />} />
-            <Route path="/oleos" element={<Oleos menuOpened={menuOpened} />} />
-            <Route
-              path="/autopecas"
-              element={<AutoPecas menuOpened={menuOpened} />}
-            />
-            <Route path="*" element={<Erro404 menuOpened={menuOpened} />} />
-          </Routes>
-        </Hidden>
+        */}
+        <Navbar abrirMenu={abrirMenu} menuOpened={menuOpened} />
+        <Routes>
+          <Route path="/" element={<Home menuOpened={menuOpened} />} />
+          <Route
+            path="/alinhamento"
+            element={<Alinhamento menuOpened={menuOpened} />}
+          />
+          <Route
+            path="/balanceamento"
+            element={<Balanceamento menuOpened={menuOpened} />}
+          />
+          <Route
+            path="/trocadeoleo"
+            element={<Trocadeoleo menuOpened={menuOpened} />}
+          />
+          <Route
+            path="/suspensao"
+            element={<Suspensao menuOpened={menuOpened} />}
+          />
+          <Route path="/motor" element={<Motor menuOpened={menuOpened} />} />
+          <Route
+            path="/escapamento"
+            element={<Escapamento menuOpened={menuOpened} />}
+          />
+          <Route path="/pneus" element={<Pneus menuOpened={menuOpened} />} />
+          <Route path="/oleos" element={<Oleos menuOpened={menuOpened} />} />
+          <Route
+            path="/autopecas"
+            element={<AutoPecas menuOpened={menuOpened} />}
+          />
+          <Route path="*" element={<Erro404 menuOpened={menuOpened} />} />
+        </Routes>
       </Router>
     </ThemeProvider>
   );

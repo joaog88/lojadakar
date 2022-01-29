@@ -6,6 +6,7 @@ import {
   Grid,
   TextField,
   Typography,
+  Hidden,
 } from "@material-ui/core";
 import React from "react";
 import NavbarInferior from "./NavbarInferior";
@@ -55,7 +56,13 @@ export default function Pneus() {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "1.6rem",
+    fontSize: "1.3rem",
+  };
+  const EstiloLetraTituloMobile = {
+    fontFamily: "Helvetica",
+    fontWeight: 600,
+    color: "black",
+    fontSize: "1.05rem",
   };
   const EstiloSubTitulo = {
     fontFamily: "Helvetica",
@@ -67,10 +74,10 @@ export default function Pneus() {
     fontFamily: "Helvetica",
     fontWeight: 450,
     color: "black",
-    fontSize: "1.0rem",
+    fontSize: "0.95rem",
   };
   const ButtonStyle = {
-    fontSize: "1.25rem",
+    fontSize: "1.0rem",
     fontWeight: 540,
     textTransform: "none",
     fontFamily: "Helvetica",
@@ -94,25 +101,27 @@ export default function Pneus() {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "1.2rem",
+    fontSize: "1.0rem",
   };
   const EstiloLetraTelefone = {
     fontFamily: "Helvetica",
     fontWeight: 600,
     color: "black",
-    fontSize: "0.98rem",
+    fontSize: "0.9rem",
   };
   return (
     <div>
-      <div
-        style={{
-          background: `url(${imagemdepneus}) no-repeat center`,
-          backgroundSize: "100vw 100%",
-          paddingTop: "300px",
-        }}
-      >
-        <br />
-      </div>
+      <Hidden xsDown>
+        <div
+          style={{
+            background: `url(${imagemdepneus}) no-repeat center`,
+            backgroundSize: "100vw 100%",
+            paddingTop: "300px",
+          }}
+        >
+          <br />
+        </div>
+      </Hidden>
 
       <Grid
         container
@@ -127,155 +136,324 @@ export default function Pneus() {
             justify="center"
             style={{ textAlign: "center" }}
           >
-            <Grid item xs={6}>
+            <Grid item xs={12}>
               <Typography style={EstiloLetraTitulo}>
                 Selecione o pneu que você está procurando
               </Typography>
             </Grid>
           </Grid>
-
-          <Grid
-            item
-            xs={12}
-            style={{ textAlign: "center", verticalAlign: "middle" }}
-          >
-            <div
-              style={{
-                textAlign: "center",
-                display: "inline-block",
-                float: "center",
-                verticalAlign: "middle",
-              }}
+          <Hidden smUp>
+            <Grid
+              item
+              xs={12}
+              style={{ textAlign: "center", verticalAlign: "middle" }}
             >
-              <Box>
-                <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }}>
-                  <InputLabel id="escolheraro">Aro</InputLabel>
-                  <Select
-                    labelId="aro"
-                    id="escolheroaro"
-                    value={aro}
-                    label="aro"
-                    onChange={escolheraro}
-                    MenuProps={MenuProps}
-                    style={{ borderRadius: "10px" }}
-                  >
-                    <MenuItem value={13}>13</MenuItem>
-                    <MenuItem value={14}>14</MenuItem>
-                    <MenuItem value={15}>15</MenuItem>
-                    <MenuItem value={16}>16</MenuItem>
-                    <MenuItem value={17}>17</MenuItem>
-                    <MenuItem value={18}>18</MenuItem>
-                    <MenuItem value={19}>19</MenuItem>
-                    <MenuItem value={20}>20</MenuItem>
-                    <MenuItem value={21}>21</MenuItem>
-                  </Select>
-                </FormControl>
-              </Box>
-            </div>
-            <div
-              style={{
-                textAlign: "center",
-                display: "inline-block",
-                float: "center",
-                verticalAlign: "middle",
-              }}
-            >
-              <Box>
-                <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }}>
-                  <InputLabel id="largura">Largura</InputLabel>
-                  <Select
-                    labelId="escolherlargura"
-                    id="largura"
-                    value={largura}
-                    label="Largura"
-                    onChange={escolherlargura}
-                    MenuProps={MenuProps}
-                    style={{ borderRadius: "10px" }}
-                  >
-                    <MenuItem value={155}>155</MenuItem>
-                    <MenuItem value={165}>165</MenuItem>
-                    <MenuItem value={175}>175</MenuItem>
-                    <MenuItem value={185}>185</MenuItem>
-                    <MenuItem value={195}>195</MenuItem>
-                    <MenuItem value={205}>205</MenuItem>
-                    <MenuItem value={225}>225</MenuItem>
-                    <MenuItem value={245}>245</MenuItem>
-                    <MenuItem value={255}>255</MenuItem>
-                    <MenuItem value={265}>265</MenuItem>
-                    <MenuItem value={275}>275</MenuItem>
-                    <MenuItem value={285}>285</MenuItem>
-                    <MenuItem value={295}>295</MenuItem>
-                    <MenuItem value={305}>305</MenuItem>
-                    <MenuItem value={315}>315</MenuItem>
-                    <MenuItem value={325}>325</MenuItem>
-                  </Select>
-                </FormControl>
-              </Box>
-            </div>
-            <div
-              style={{
-                textAlign: "center",
-                display: "inline-block",
-                float: "center",
-                verticalAlign: "middle",
-              }}
-            >
-              <Box>
-                <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }}>
-                  <InputLabel id="altura">Altura</InputLabel>
-                  <Select
-                    labelId="escolheraltura"
-                    id="altura"
-                    value={altura}
-                    label="Altura"
-                    onChange={escolheraltura}
-                    MenuProps={MenuProps}
-                    style={{ borderRadius: "10px" }}
-                  >
-                    <MenuItem value={35}>35</MenuItem>
-                    <MenuItem value={40}>40</MenuItem>
-                    <MenuItem value={45}>45</MenuItem>
-                    <MenuItem value={50}>50</MenuItem>
-                    <MenuItem value={55}>55</MenuItem>
-                    <MenuItem value={60}>60</MenuItem>
-                    <MenuItem value={65}>65</MenuItem>
-                    <MenuItem value={70}>70</MenuItem>
-                    <MenuItem value={75}>75</MenuItem>
-                  </Select>
-                </FormControl>
-              </Box>
-            </div>
-            <div
-              style={{
-                textAlign: "center",
-                display: "inline-block",
-                float: "center",
-                verticalAlign: "middle",
-              }}
-            >
-              <a
-                target="_blank"
-                style={{ textDecoration: "none" }}
-                href={
-                  "https://api.whatsapp.com/send/?phone=5535997658926&text=Olá, procuro um pneu de aro " +
-                  aro +
-                  ", de largura " +
-                  largura +
-                  " e altura " +
-                  altura +
-                  "."
-                }
+              <Grid
+                container
+                alignItems="center"
+                justify="center"
+                style={{ textAlign: "center" }}
               >
-                <Button
-                  variant="outlined"
-                  startIcon={<WhatsAppIcon />}
-                  style={ButtonStyle}
+                <Grid item xs={12}>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      display: "inline-block",
+                      float: "center",
+                      verticalAlign: "middle",
+                    }}
+                  >
+                    <Box>
+                      <FormControl
+                        variant="outlined"
+                        sx={{ m: 1, minWidth: 120 }}
+                      >
+                        <InputLabel id="escolheraro">Aro</InputLabel>
+                        <Select
+                          labelId="aro"
+                          id="escolheroaro"
+                          value={aro}
+                          label="aro"
+                          onChange={escolheraro}
+                          MenuProps={MenuProps}
+                          style={{ borderRadius: "10px" }}
+                        >
+                          <MenuItem value={13}>13</MenuItem>
+                          <MenuItem value={14}>14</MenuItem>
+                          <MenuItem value={15}>15</MenuItem>
+                          <MenuItem value={16}>16</MenuItem>
+                          <MenuItem value={17}>17</MenuItem>
+                          <MenuItem value={18}>18</MenuItem>
+                          <MenuItem value={19}>19</MenuItem>
+                          <MenuItem value={20}>20</MenuItem>
+                          <MenuItem value={21}>21</MenuItem>
+                        </Select>
+                      </FormControl>
+                    </Box>
+                  </div>
+                </Grid>
+                <Grid item xs={12}>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      display: "inline-block",
+                      float: "center",
+                      verticalAlign: "middle",
+                    }}
+                  >
+                    <Box>
+                      <FormControl
+                        variant="outlined"
+                        sx={{ m: 1, minWidth: 120 }}
+                      >
+                        <InputLabel id="largura">Largura</InputLabel>
+                        <Select
+                          labelId="escolherlargura"
+                          id="largura"
+                          value={largura}
+                          label="Largura"
+                          onChange={escolherlargura}
+                          MenuProps={MenuProps}
+                          style={{ borderRadius: "10px" }}
+                        >
+                          <MenuItem value={155}>155</MenuItem>
+                          <MenuItem value={165}>165</MenuItem>
+                          <MenuItem value={175}>175</MenuItem>
+                          <MenuItem value={185}>185</MenuItem>
+                          <MenuItem value={195}>195</MenuItem>
+                          <MenuItem value={205}>205</MenuItem>
+                          <MenuItem value={225}>225</MenuItem>
+                          <MenuItem value={245}>245</MenuItem>
+                          <MenuItem value={255}>255</MenuItem>
+                          <MenuItem value={265}>265</MenuItem>
+                          <MenuItem value={275}>275</MenuItem>
+                          <MenuItem value={285}>285</MenuItem>
+                          <MenuItem value={295}>295</MenuItem>
+                          <MenuItem value={305}>305</MenuItem>
+                          <MenuItem value={315}>315</MenuItem>
+                          <MenuItem value={325}>325</MenuItem>
+                        </Select>
+                      </FormControl>
+                    </Box>
+                  </div>
+                </Grid>
+                <Grid item xs={12}>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      display: "inline-block",
+                      float: "center",
+                      verticalAlign: "middle",
+                    }}
+                  >
+                    <Box>
+                      <FormControl
+                        variant="outlined"
+                        sx={{ m: 1, minWidth: 120 }}
+                      >
+                        <InputLabel id="altura">Altura</InputLabel>
+                        <Select
+                          labelId="escolheraltura"
+                          id="altura"
+                          value={altura}
+                          label="Altura"
+                          onChange={escolheraltura}
+                          MenuProps={MenuProps}
+                          style={{ borderRadius: "10px" }}
+                        >
+                          <MenuItem value={35}>35</MenuItem>
+                          <MenuItem value={40}>40</MenuItem>
+                          <MenuItem value={45}>45</MenuItem>
+                          <MenuItem value={50}>50</MenuItem>
+                          <MenuItem value={55}>55</MenuItem>
+                          <MenuItem value={60}>60</MenuItem>
+                          <MenuItem value={65}>65</MenuItem>
+                          <MenuItem value={70}>70</MenuItem>
+                          <MenuItem value={75}>75</MenuItem>
+                        </Select>
+                      </FormControl>
+                    </Box>
+                  </div>
+                </Grid>
+                <Grid item xs={12}>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      display: "inline-block",
+                      float: "center",
+                      verticalAlign: "middle",
+                    }}
+                  >
+                    <a
+                      target="_blank"
+                      style={{ textDecoration: "none" }}
+                      href={
+                        "https://api.whatsapp.com/send/?phone=5535997658926&text=Olá, procuro um pneu de aro " +
+                        aro +
+                        ", de largura " +
+                        largura +
+                        " e altura " +
+                        altura +
+                        "."
+                      }
+                    >
+                      <Button
+                        variant="outlined"
+                        startIcon={<WhatsAppIcon />}
+                        style={ButtonStyle}
+                      >
+                        Consulte-nos
+                      </Button>
+                    </a>
+                  </div>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Hidden>
+          <Hidden xsDown>
+            <Grid
+              item
+              xs={12}
+              style={{ textAlign: "center", verticalAlign: "middle" }}
+            >
+              <div
+                style={{
+                  textAlign: "center",
+                  display: "inline-block",
+                  float: "center",
+                  verticalAlign: "middle",
+                }}
+              >
+                <Box>
+                  <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }}>
+                    <InputLabel id="escolheraro">Aro</InputLabel>
+                    <Select
+                      labelId="aro"
+                      id="escolheroaro"
+                      value={aro}
+                      label="aro"
+                      onChange={escolheraro}
+                      MenuProps={MenuProps}
+                      style={{ borderRadius: "10px" }}
+                    >
+                      <MenuItem value={13}>13</MenuItem>
+                      <MenuItem value={14}>14</MenuItem>
+                      <MenuItem value={15}>15</MenuItem>
+                      <MenuItem value={16}>16</MenuItem>
+                      <MenuItem value={17}>17</MenuItem>
+                      <MenuItem value={18}>18</MenuItem>
+                      <MenuItem value={19}>19</MenuItem>
+                      <MenuItem value={20}>20</MenuItem>
+                      <MenuItem value={21}>21</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Box>
+              </div>
+              <div
+                style={{
+                  textAlign: "center",
+                  display: "inline-block",
+                  float: "center",
+                  verticalAlign: "middle",
+                }}
+              >
+                <Box>
+                  <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }}>
+                    <InputLabel id="largura">Largura</InputLabel>
+                    <Select
+                      labelId="escolherlargura"
+                      id="largura"
+                      value={largura}
+                      label="Largura"
+                      onChange={escolherlargura}
+                      MenuProps={MenuProps}
+                      style={{ borderRadius: "10px" }}
+                    >
+                      <MenuItem value={155}>155</MenuItem>
+                      <MenuItem value={165}>165</MenuItem>
+                      <MenuItem value={175}>175</MenuItem>
+                      <MenuItem value={185}>185</MenuItem>
+                      <MenuItem value={195}>195</MenuItem>
+                      <MenuItem value={205}>205</MenuItem>
+                      <MenuItem value={225}>225</MenuItem>
+                      <MenuItem value={245}>245</MenuItem>
+                      <MenuItem value={255}>255</MenuItem>
+                      <MenuItem value={265}>265</MenuItem>
+                      <MenuItem value={275}>275</MenuItem>
+                      <MenuItem value={285}>285</MenuItem>
+                      <MenuItem value={295}>295</MenuItem>
+                      <MenuItem value={305}>305</MenuItem>
+                      <MenuItem value={315}>315</MenuItem>
+                      <MenuItem value={325}>325</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Box>
+              </div>
+              <div
+                style={{
+                  textAlign: "center",
+                  display: "inline-block",
+                  float: "center",
+                  verticalAlign: "middle",
+                }}
+              >
+                <Box>
+                  <FormControl variant="outlined" sx={{ m: 1, minWidth: 120 }}>
+                    <InputLabel id="altura">Altura</InputLabel>
+                    <Select
+                      labelId="escolheraltura"
+                      id="altura"
+                      value={altura}
+                      label="Altura"
+                      onChange={escolheraltura}
+                      MenuProps={MenuProps}
+                      style={{ borderRadius: "10px" }}
+                    >
+                      <MenuItem value={35}>35</MenuItem>
+                      <MenuItem value={40}>40</MenuItem>
+                      <MenuItem value={45}>45</MenuItem>
+                      <MenuItem value={50}>50</MenuItem>
+                      <MenuItem value={55}>55</MenuItem>
+                      <MenuItem value={60}>60</MenuItem>
+                      <MenuItem value={65}>65</MenuItem>
+                      <MenuItem value={70}>70</MenuItem>
+                      <MenuItem value={75}>75</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Box>
+              </div>
+              <div
+                style={{
+                  textAlign: "center",
+                  display: "inline-block",
+                  float: "center",
+                  verticalAlign: "middle",
+                }}
+              >
+                <a
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                  href={
+                    "https://api.whatsapp.com/send/?phone=5535997658926&text=Olá, procuro um pneu de aro " +
+                    aro +
+                    ", de largura " +
+                    largura +
+                    " e altura " +
+                    altura +
+                    "."
+                  }
                 >
-                  Consulte-nos
-                </Button>
-              </a>
-            </div>
-          </Grid>
+                  <Button
+                    variant="outlined"
+                    startIcon={<WhatsAppIcon />}
+                    style={ButtonStyle}
+                  >
+                    Consulte-nos
+                  </Button>
+                </a>
+              </div>
+            </Grid>
+          </Hidden>
           <Grid item xs={12} style={{ marginTop: "10px" }}>
             <Card
               variant="outlined"
@@ -286,8 +464,7 @@ export default function Pneus() {
             >
               <CardContent style={{ textAlign: "center" }}>
                 <Typography style={EstiloLetraCard}>
-                  Caso não encontre a medida que deseja, contate-nos via
-                  telefone:
+                  Caso não encontre a medida que procura, ligue em:
                 </Typography>
 
                 <div
@@ -338,26 +515,43 @@ export default function Pneus() {
             paddingTop: "20px",
           }}
         >
-          <Grid item xs={12} style={{ marginBottom: "30px" }}>
-            <Typography style={EstiloLetraTitulo}>
-              Por que comprar pneu na Dakar?
-            </Typography>
-            <Grid item xs={8}>
-              <div
-                style={{
-                  backgroundColor: "#690000",
-                  paddingBottom: "3px",
-                }}
-              />
+          <Hidden xsDown>
+            <Grid item xs={12} style={{ marginBottom: "30px" }}>
+              <Typography style={EstiloLetraTitulo}>
+                Por que comprar pneu na Dakar?
+              </Typography>
+              <Grid item xs={8}>
+                <div
+                  style={{
+                    backgroundColor: "#690000",
+                    paddingBottom: "3px",
+                  }}
+                />
+              </Grid>
             </Grid>
-          </Grid>
+          </Hidden>
+          <Hidden smUp>
+            <Grid item xs={12} style={{ marginBottom: "20px" }}>
+              <Typography style={EstiloLetraTituloMobile}>
+                Por que comprar pneu na Dakar?
+              </Typography>
+              <Grid item xs={12}>
+                <div
+                  style={{
+                    backgroundColor: "#690000",
+                    paddingBottom: "3px",
+                  }}
+                />
+              </Grid>
+            </Grid>
+          </Hidden>
           <Grid
             container
             alignItems="center"
             justify="center"
             style={{ marginTop: "10px" }}
           >
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4} style={{ marginBottom: "15px" }}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
                   <Grid item xs={12} style={{ textAlign: "center" }}>
@@ -381,7 +575,7 @@ export default function Pneus() {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4} style={{ marginBottom: "15px" }}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
                   <Grid item xs={12} style={{ textAlign: "center" }}>
@@ -399,14 +593,13 @@ export default function Pneus() {
                     <Typography style={EstiloLetraTexto}>
                       Nossas lojas são equipadas com ferramentas de ponta, com o
                       objetivo de assegurar o profissionalismo da instalação dos
-                      pneus em seu veículo, com o intuito de garantir a sua
-                      segurança e da sua família.
+                      pneus em seu veículo.
                     </Typography>
                   </Grid>
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4}>
               <Card style={EstiloCardInformativo}>
                 <CardContent>
                   <Grid item xs={12} style={{ textAlign: "Center" }}>
@@ -435,13 +628,21 @@ export default function Pneus() {
           </Grid>
         </Grid>
       </Grid>
-      <div
-        style={{
-          backgroundColor: "#ededed",
-          paddingBottom: "5px",
-        }}
-      />
-      <NavbarInferior />
+      <Hidden xsDown>
+        <NavbarInferior />
+      </Hidden>
+      <Hidden smUp>
+        <Grid
+          container
+          alignItems="center"
+          justify="center"
+          style={{ textAlign: "center" }}
+        >
+          <Grid item xs={12}>
+            <NavbarInferior />
+          </Grid>
+        </Grid>
+      </Hidden>
     </div>
   );
 }
