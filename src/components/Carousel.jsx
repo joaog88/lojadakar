@@ -122,7 +122,7 @@ export default function Carousel() {
             <div
               style={{
                 background: `url(${logo1mobile}) no-repeat center`,
-                backgroundSize: "cover",
+                backgroundSize: "100vw 100%",
                 paddingTop: "280px",
               }}
             >
@@ -133,7 +133,7 @@ export default function Carousel() {
             <div
               style={{
                 background: `url(${logo4mobile}) no-repeat center`,
-                backgroundSize: "cover",
+                backgroundSize: "100vw 100%",
                 paddingTop: "280px",
               }}
             >
@@ -144,7 +144,7 @@ export default function Carousel() {
             <div
               style={{
                 background: `url(${logo3mobile}) no-repeat center`,
-                backgroundSize: "cover",
+                backgroundSize: "100vw 100%",
                 paddingTop: "280px",
               }}
             >
@@ -155,7 +155,7 @@ export default function Carousel() {
             <div
               style={{
                 background: `url(${logo2mobile}) no-repeat center`,
-                backgroundSize: "cover",
+                backgroundSize: "100vw 100%",
                 paddingTop: "280px",
               }}
             >
@@ -166,7 +166,7 @@ export default function Carousel() {
             <div
               style={{
                 background: `url(${logo5mobile}) no-repeat center`,
-                backgroundSize: "cover",
+                backgroundSize: "100vw 100%",
                 paddingTop: "280px",
               }}
             >
