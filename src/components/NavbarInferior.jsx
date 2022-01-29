@@ -415,7 +415,7 @@ function NavbarInferior() {
                     startIcon={<WhatsAppIcon />}
                     color="secondary"
                     style={{
-                      fontSize: "0.70rem",
+                      fontSize: "1.5rem",
                       fontWeight: 545,
                       fontFamily: "Helvetica",
                       textTransform: "none",
@@ -433,7 +433,7 @@ function NavbarInferior() {
                     startIcon={<FacebookIcon />}
                     color="secondary"
                     style={{
-                      fontSize: "0.70rem",
+                      fontSize: "1.5rem",
                       fontWeight: 545,
                       fontFamily: "Helvetica",
                       textTransform: "none",
@@ -451,7 +451,7 @@ function NavbarInferior() {
                     startIcon={<InstagramIcon />}
                     color="secondary"
                     style={{
-                      fontSize: "0.70rem",
+                      fontSize: "1.5rem",
                       fontWeight: 545,
                       fontFamily: "Helvetica",
                       textTransform: "none",

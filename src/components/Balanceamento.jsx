@@ -235,7 +235,7 @@ export default function Balanceamento() {
             textAlign: "left",
             paddingLeft: "15px",
             paddingRight: "15px",
-            marginTop: "130px",
+            marginTop: "150px",
             marginBottom: "30px",
           }}
         >
