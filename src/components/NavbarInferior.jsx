@@ -21,10 +21,10 @@ function NavbarInferior() {
     fontFamily: "Helvetica",
     fontWeight: 550,
     color: "#ffffff",
-    fontSize: "0.80rem",
+    fontSize: "1.0rem",
   };
   const textonavbarcidade = {
-    fontSize: "0.70rem",
+    fontSize: "0.80rem",
     fontWeight: 450,
     color: "#ffffff",
     fontFamily: "Helvetica",
@@ -298,7 +298,7 @@ function NavbarInferior() {
                   startIcon={<CallOutlinedIcon />}
                   color="secondary"
                   style={{
-                    fontSize: "0.70rem",
+                    fontSize: "0.80rem",
                     fontWeight: 545,
                     fontFamily: "Helvetica",
                     textTransform: "none",
@@ -316,7 +316,7 @@ function NavbarInferior() {
                   startIcon={<CallOutlinedIcon />}
                   color="secondary"
                   style={{
-                    fontSize: "0.70rem",
+                    fontSize: "0.80rem",
                     fontWeight: 545,
                     fontFamily: "Helvetica",
                     textTransform: "none",
@@ -352,7 +352,7 @@ function NavbarInferior() {
                         startIcon={<LocationOnOutlinedIcon />}
                         color="secondary"
                         style={{
-                          fontSize: "0.70rem",
+                          fontSize: "0.80rem",
                           fontWeight: 450,
                           fontFamily: "Helvetica",
                           textTransform: "none",
@@ -373,11 +373,11 @@ function NavbarInferior() {
                         startIcon={<LocationOnOutlinedIcon />}
                         color="secondary"
                         style={{
-                          fontSize: "0.70rem",
+                          fontSize: "0.80rem",
                           fontWeight: 450,
                           fontFamily: "Helvetica",
                           textTransform: "none",
-                          paddingRight: "33.5px",
+                          paddingRight: "38px",
                           paddingTop: "25px",
                         }}
                       >

@@ -120,8 +120,8 @@ export default function Escapamento() {
                 <Hidden xsDown>
                   <Grid item xs={12}>
                     <Typography style={EstiloLetraCard}>
-                      Agende seu serviço de escapamento com um de nossos atendentes
-                      via:
+                      Agende seu serviço de escapamento com um de nossos
+                      atendentes via:
                     </Typography>
                   </Grid>
                   <Grid item xs={12} style={{ paddingTop: "10px" }}>
@@ -173,8 +173,8 @@ export default function Escapamento() {
                 <Hidden smUp>
                   <Grid item xs={12}>
                     <Typography style={EstiloLetraCardMobile}>
-                      Agende seu serviço de escapamento com um de nossos atendentes
-                      via:
+                      Agende seu serviço de escapamento com um de nossos
+                      atendentes via:
                     </Typography>
                   </Grid>
                   <Grid item xs={12} style={{ paddingTop: "10px" }}>
@@ -237,7 +237,7 @@ export default function Escapamento() {
             textAlign: "left",
             paddingLeft: "15px",
             paddingRight: "15px",
-            marginTop: "130px",
+            marginTop: "150px",
             marginBottom: "30px",
           }}
         >
