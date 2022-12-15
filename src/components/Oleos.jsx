@@ -213,7 +213,7 @@ export default function AutoPecas() {
                 target="_blank"
                 style={{ textDecoration: "none" }}
                 href={
-                  "https://api.whatsapp.com/send/?phone=5535997658926&text=" +
+                  "https://api.whatsapp.com/send/?phone=5535998644153&text=" +
                   value
                 }
               >
