@@ -288,7 +288,7 @@ export default function Pneus() {
                       target="_blank"
                       style={{ textDecoration: "none" }}
                       href={
-                        "https://api.whatsapp.com/send/?phone=5535997658926&text=Olá, procuro um pneu de aro " +
+                        "https://api.whatsapp.com/send/?phone=5535998644153&text=Olá, procuro um pneu de aro " +
                         aro +
                         ", de largura " +
                         largura +

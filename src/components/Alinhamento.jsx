@@ -180,7 +180,7 @@ export default function Alinhamento() {
                       target="_blank"
                       style={{ textDecoration: "none" }}
                       href={
-                        "https://api.whatsapp.com/send/?phone=5535997658926&text=Olá, gostaria de fazer um orçamento para fazer um alinhamento."
+                        "https://api.whatsapp.com/send/?phone=5535998644153&text=Olá, gostaria de fazer um orçamento para fazer um alinhamento."
                       }
                     >
                       <Button

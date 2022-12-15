@@ -407,7 +407,7 @@ function NavbarInferior() {
                   target="_blank"
                   style={{ textDecoration: "none" }}
                   href={
-                    "https://api.whatsapp.com/send/?phone=5535997658926&text=Olá, estou entrando em contato através do site da Dakar."
+                    "https://api.whatsapp.com/send/?phone=5535998644153&text=Olá, estou entrando em contato através do site da Dakar."
                   }
                 >
                   <Button
