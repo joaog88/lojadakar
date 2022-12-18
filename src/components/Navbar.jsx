@@ -17,9 +17,20 @@ export default function Navbar({ titulo, abrirMenu, menuOpened }) {
   const ButtonStyle = {
     fontFamily: "Helvetica",
     fontWeight: 550,
-    color: "#ededed",
+    color: "#EEEEEE",
     fontSize: "0.95rem",
     textTransform: "uppercase",
+    display: "inline-block",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    verticalAlign: "middle",
+    cursor: "pointer",
+  };
+  const ButtonStyleMobile = {
+    fontFamily: "Helvetica",
+    fontWeight: 650,
+    color: "#050505",
+    fontSize: "0.95rem",
     display: "inline-block",
     paddingLeft: "10px",
     paddingRight: "10px",
@@ -78,7 +89,7 @@ export default function Navbar({ titulo, abrirMenu, menuOpened }) {
               <Grid container alignItems="center" justify="flex-start">
                 <img
                   src="/Imagens/dakar.jpg"
-                  height="53px"
+                  height="55px"
                   onClick={voltarParaAHomeDoJao}
                   style={{
                     cursor: "pointer",
@@ -132,29 +143,68 @@ export default function Navbar({ titulo, abrirMenu, menuOpened }) {
                 </Typography>
               </div>
             </Grid>
+            
           </Hidden>
           <Hidden smUp>
-            <Grid
+          <Grid item xs={12}>
+                <div
+                  style={{
+                    backgroundColor: "#ffbf00",
+                    paddingBottom: "2px",
+                  }}
+                />
+              </Grid>
+          <Grid
               item
-              xs={6}
-              style={{
-                textAlign: "right",
-                paddingBottom: "15px",
-                paddingTop: "15px",
-              }}
+              xs={12}
+              style={{ textAlign: "center", verticalAlign: "middle", backgroundColor: "#d9d9d9", }}
             >
-              <Button
-                startIcon={<MenuIcon />}
-                onClick={handleClick}
-                style={{ color: "#ffff", padding: "5px" }}
-              ></Button>
+              <div
+                style={{
+                  textAlign: "center",
+                  display: "inline-block",
+                  float: "center",
+                  verticalAlign: "middle",
+                }}
+              >
+                <Typography onClick={Pneus} style={ButtonStyleMobile}>
+                  Pneus
+                </Typography>
 
-              <MenuNavbar
-                open={open}
-                anchorEl={anchorEl}
-                setAnchorEl={setAnchorEl}
-              />
+                <div
+                  style={{
+                    display: "inline-block",
+                    background: "black",
+                    paddingTop: "15px",
+                    paddingRight: "1px",
+                    verticalAlign: "middle",
+                  }}
+                />
+                <Typography onClick={Oleos} style={ButtonStyleMobile}>
+                  Óleos
+                </Typography>
+                <div
+                  style={{
+                    display: "inline-block",
+                    background: "black",
+                    paddingTop: "15px",
+                    verticalAlign: "middle",
+                    paddingRight: "1px",
+                  }}
+                />
+                <Typography onClick={AutoPecas} style={ButtonStyleMobile}>
+                  Auto Peças
+                </Typography>
+              </div>
             </Grid>
+            <Grid item xs={12}>
+                <div
+                  style={{
+                    backgroundColor: "#690000",
+                    paddingBottom: "2px",
+                  }}
+                />
+              </Grid>
           </Hidden>
           <Hidden xsDown>
             <Grid item xs={3}>
@@ -166,7 +216,7 @@ export default function Navbar({ titulo, abrirMenu, menuOpened }) {
               >
                 <img
                   src="/Imagens/continentallogo.jpg"
-                  height="40px"
+                  height="50px"
                   onClick={voltarParaAHomeDoJao}
                   style={{ cursor: "pointer", paddingRight: "5px" }}
                 />

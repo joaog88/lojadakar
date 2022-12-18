@@ -111,13 +111,6 @@ export default function AutoPecas() {
           <br />
         </div>
       </Hidden>
-      <div
-        style={{
-          backgroundColor: "#121212",
-          paddingBottom: "3px",
-        }}
-      />
-
       <Grid
         container
         alignItems="flex-start"
