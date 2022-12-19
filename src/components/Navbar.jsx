@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MenuNavbar from "./MenuNavbar";
 import MenuIcon from "@mui/icons-material/Menu";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export default function Navbar({ titulo, abrirMenu, menuOpened }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -30,10 +33,10 @@ export default function Navbar({ titulo, abrirMenu, menuOpened }) {
     fontFamily: "Helvetica",
     fontWeight: 650,
     color: "#050505",
-    fontSize: "0.95rem",
+    fontSize: "0.98rem",
     display: "inline-block",
-    paddingLeft: "10px",
-    paddingRight: "10px",
+    paddingLeft: "20px",
+    paddingRight: "20px",
     verticalAlign: "middle",
     cursor: "pointer",
   };
@@ -79,14 +82,15 @@ export default function Navbar({ titulo, abrirMenu, menuOpened }) {
           <Hidden smUp>
             <Grid
               item
-              xs={6}
+              xs={12}
               style={{
                 textAlign: "left",
-                paddingLeft: "15px",
-                paddingBottom: "10px",
-              }}
+                paddingLeft: "15px"}}
             >
-              <Grid container alignItems="center" justify="flex-start">
+              <Grid container alignItems="center">
+                <Grid item xs={4}    style={{
+                textAlign: "left",
+              }}>
                 <img
                   src="/Imagens/dakar.jpg"
                   height="55px"
@@ -96,7 +100,72 @@ export default function Navbar({ titulo, abrirMenu, menuOpened }) {
                     paddingTop: "8px",
                   }}
                 />
+                </Grid>
+              <Grid item xs={8} style={{textAlign: "center"}}>
+              <Grid container alignItems="center" justify="center">
+              <Grid item xs={3}>
+                <a
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                  href={
+                    "https://api.whatsapp.com/send/?phone=5535998644153&text=Olá, estou entrando em contato através do site da Dakar."
+                  }
+                >
+                  <Button
+                    variant="text"
+                    startIcon={<WhatsAppIcon />}
+                    color="secondary"
+                    style={{
+                      fontSize: "1.5rem",
+                      fontWeight: 545,
+                      fontFamily: "Helvetica",
+                      textTransform: "none",
+                    }}
+                  ></Button>
+                </a>
+                </Grid>
+                <Grid item xs={3}>
+                <a
+                  style={{ textDecoration: "none" }}
+                  target="_blank"
+                  href="https://www.facebook.com/dakarsl"
+                >
+                  <Button
+                    variant="text"
+                    startIcon={<FacebookIcon />}
+                    color="secondary"
+                    style={{
+                      fontSize: "1.5rem",
+                      fontWeight: 545,
+                      fontFamily: "Helvetica",
+                      textTransform: "none",
+                    }}
+                  ></Button>
+                </a>
+                </Grid>
+                <Grid item xs={3}>
+                <a
+                  style={{ textDecoration: "none" }}
+                  target="_blank"
+                  href="https://www.instagram.com/dakar.centroautomotivo/"
+                >
+                  <Button
+                    variant="text"
+                    startIcon={<InstagramIcon />}
+                    color="secondary"
+                    style={{
+                      fontSize: "1.5rem",
+                      fontWeight: 545,
+                      fontFamily: "Helvetica",
+                      textTransform: "none",
+                    }}
+                  ></Button>
+                </a>
               </Grid>
+              </Grid>
+              </Grid>
+              </Grid>
+
             </Grid>
           </Hidden>
           <Hidden xsDown>
@@ -157,7 +226,8 @@ export default function Navbar({ titulo, abrirMenu, menuOpened }) {
           <Grid
               item
               xs={12}
-              style={{ textAlign: "center", verticalAlign: "middle", backgroundColor: "#d9d9d9", }}
+              style={{ textAlign: "center", verticalAlign: "middle", backgroundColor: "#d9d9d9", paddingTop:"3px", 
+              paddingBottom:"3px" }}
             >
               <div
                 style={{
