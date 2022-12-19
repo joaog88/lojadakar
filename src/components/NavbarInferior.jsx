@@ -394,70 +394,10 @@ function NavbarInferior() {
               <Grid item xs={12}>
                 <div
                   style={{
-                    backgroundColor: "#ffbf00",
-                    paddingBottom: "1px",
+                    backgroundColor: "#690000",
+                    paddingBottom: "2px",
                   }}
                 />
-              </Grid>
-              <Grid item xs={12} style={{ paddingTop: "5px" }}>
-                <Typography style={textonavbar}>Redes sociais:</Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <a
-                  target="_blank"
-                  style={{ textDecoration: "none" }}
-                  href={
-                    "https://api.whatsapp.com/send/?phone=5535998644153&text=Olá, estou entrando em contato através do site da Dakar."
-                  }
-                >
-                  <Button
-                    variant="text"
-                    startIcon={<WhatsAppIcon />}
-                    color="secondary"
-                    style={{
-                      fontSize: "1.5rem",
-                      fontWeight: 545,
-                      fontFamily: "Helvetica",
-                      textTransform: "none",
-                    }}
-                  ></Button>
-                </a>
-
-                <a
-                  style={{ textDecoration: "none" }}
-                  target="_blank"
-                  href="https://www.facebook.com/dakarsl"
-                >
-                  <Button
-                    variant="text"
-                    startIcon={<FacebookIcon />}
-                    color="secondary"
-                    style={{
-                      fontSize: "1.5rem",
-                      fontWeight: 545,
-                      fontFamily: "Helvetica",
-                      textTransform: "none",
-                    }}
-                  ></Button>
-                </a>
-
-                <a
-                  style={{ textDecoration: "none" }}
-                  target="_blank"
-                  href="https://www.instagram.com/dakar.centroautomotivo/"
-                >
-                  <Button
-                    variant="text"
-                    startIcon={<InstagramIcon />}
-                    color="secondary"
-                    style={{
-                      fontSize: "1.5rem",
-                      fontWeight: 545,
-                      fontFamily: "Helvetica",
-                      textTransform: "none",
-                    }}
-                  ></Button>
-                </a>
               </Grid>
             </Grid>
           </Grid>

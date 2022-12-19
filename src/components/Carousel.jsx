@@ -43,7 +43,7 @@ export default function Carousel() {
     <div
       style={{
         textAlign: "center",
-        backgroundColor: "#fcbd00",
+        backgroundColor: "#000000",
       }}
     >
       <Hidden xsDown>
